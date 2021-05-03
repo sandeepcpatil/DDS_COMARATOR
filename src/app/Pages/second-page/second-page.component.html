@@ -1,0 +1,26 @@
+<div class="main-check">
+  <label nz-checkbox [(ngModel)]="fullCheck">Full File Comparision</label>
+  <label nz-checkbox [(ngModel)]="fullNullCheck">Null Check on the Entire Column</label>
+</div>
+
+<hr width="auto">
+<div class="optional-check">
+  <label nz-checkbox [(ngModel)]="selNullCheck">Null Check on Selected Columns</label>
+  <label nz-checkbox [(ngModel)]="selDistinctCheck">Distinct Check on Certain Columns</label>
+</div>
+
+
+<div  *ngIf="selNullCheck == true || selDistinctCheck == true ">
+    <div  class="column-one-del">
+        <p>Column 1</p>
+        <label nz-checkbox>Null check</label>
+    </div>
+    <div  class="column-one-del">
+        <p>Column 2</p>
+        <label nz-checkbox>Null Check</label>
+    </div>
+    <div  class="column-one-del">
+        <p>Column 3</p>
+        <label nz-checkbox>Null Check</label>
+    </div>
+</div>
